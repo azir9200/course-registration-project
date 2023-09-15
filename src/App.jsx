@@ -10,7 +10,7 @@ function App() {
   return (
     <>
 
-      <h1 className="text text-center">Course Registration</h1>
+      <h1 className="text text-center text-2xl font-bold ">Course Registration</h1>
 
       <div className='md:flex ' >
         <Course></Course>

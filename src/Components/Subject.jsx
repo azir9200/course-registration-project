@@ -1,7 +1,14 @@
+import { useState } from "react";
+import Shoppingcart from "./Shoppingcart";
 
 const Subject = ({ subject }) => {
   const { image, course_name, price, credit } = subject;
+  const [selectCourse, setSelectCourse] = useState([]);
 
+  const handleSelectCourse = (subject) => {
+    setSelectCourse([...selectCourse, subject]);
+  };
+  console.log(selectCourse);
 
   return (
     <div className=" text text-center max-w-sm:w-72  shadow-xl">
@@ -14,9 +21,10 @@ const Subject = ({ subject }) => {
         <p>Price  :  {price} </p>
         <p>credit : {credit} </p>
       </div>
-      <button className="bg bg-blue-500 px-20 py-2 rounded-md" >Select</button>
+      <button onClick={() => handleSelectCourse(subject)} className="bg bg-blue-500 px-20 py-2 rounded-md" >Select</button>
     </div>
+
+
   );
 };
-
 export default Subject;

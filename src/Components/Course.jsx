@@ -12,6 +12,8 @@ const Course = () => {
   }, [])
 
 
+
+
   return (
     <div className="md:w-3/4 " >
       <h3>course cards {course.length} </h3>
@@ -28,6 +30,7 @@ const Course = () => {
       </div>
 
     </div>
+
   );
 };
 
