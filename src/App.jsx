@@ -1,7 +1,8 @@
 
 import './App.css'
 import Course from './Components/Course'
-import Subject from './Components/Subject'
+import Shoppingcart from './Components/Shoppingcart'
+
 
 function App() {
 
@@ -9,12 +10,12 @@ function App() {
   return (
     <>
 
-      <h1>Course Registration</h1>
+      <h1 className="text text-green-500">Course Registration</h1>
 
-
-      <Course></Course>
-      <Subject></Subject>
-
+      <div className='md:flex text-red-600' >
+        <Course></Course>
+        <Shoppingcart></Shoppingcart>
+      </div>
     </>
   )
 }
