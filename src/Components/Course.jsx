@@ -15,7 +15,7 @@ const Course = () => {
   return (
     <div className="md:w-3/4 " >
       <h3>course cards {course.length} </h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3" >
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 " >
 
 
         {

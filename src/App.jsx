@@ -10,9 +10,9 @@ function App() {
   return (
     <>
 
-      <h1 className="text text-green-500">Course Registration</h1>
+      <h1 className="text text-center">Course Registration</h1>
 
-      <div className='md:flex text-red-600' >
+      <div className='md:flex ' >
         <Course></Course>
         <Shoppingcart></Shoppingcart>
       </div>
