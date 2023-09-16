@@ -8,12 +8,7 @@ const Course = () => {
     fetch('blogs.json')
       .then(res => res.json())
       .then(data => setCourse(data))
-
   }, [])
-
-
-
-
   return (
     <div className="md:w-3/4 " >
       <h3>course cards {course.length} </h3>
@@ -24,6 +19,7 @@ const Course = () => {
           course.map(subject => <Subject
             key={subject.id}
             subject={subject}
+          // handleAddShoppingcart={handleAddShoppingcart}
           ></Subject>)
 
         }
