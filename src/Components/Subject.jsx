@@ -2,26 +2,24 @@ import { useState } from "react";
 import Shoppingcart from "./Shoppingcart";
 
 const Subject = ({ subject }) => {
-  const { image, course_name, price, credit } = subject;
-  const [selectCourse, setSelectCourse] = useState([]);
+  const { image, course_name, course_details, price, credit } = subject;
 
-  const handleSelectCourse = (subject) => {
-    setSelectCourse([...selectCourse, subject]);
-  };
-  console.log(selectCourse);
 
   return (
-    <div className=" text text-center max-w-sm:w-72  shadow-xl">
-      <img className="m-4 w-64 " src={image} alt="" />
-      <h2 className=" sm:p-4  md:my-4" > {course_name} </h2>
-      <p>It is a long established fact that a reader
-        will be distracted by the readable content
-        of a page when looking at its layout.</p>
-      <div className="flex justify-between m-0 p-0 gap-0">
-        <p>Price  :  {price} </p>
-        <p>credit : {credit} </p>
+    <div>
+
+      <div className=" text text-center max-w-sm:w-72  shadow-xl">
+        <img className="m-4 w-64 " src={image} alt="" />
+        <h2 className=" text-xl font-semibold sm:p-4  md:my-4" > {course_name} </h2>
+        <p> {course_details} </p>
+        <div className="flex justify-evenly m-0 p-0 gap-0">
+          <p>Price  :  {price} </p>
+          <p>credit : {credit} </p>
+        </div>
+        <button onClick={() => handleSelectCourse(subject)} className="bg bg-blue-500 px-24 py-2 rounded-md" >Select</button>
       </div>
-      <button onClick={() => handleSelectCourse(subject)} className="bg bg-blue-500 px-20 py-2 rounded-md" >Select</button>
+
+
     </div>
 
 
